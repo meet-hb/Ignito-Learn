@@ -27,7 +27,8 @@
         color: #673AB7;
         font-weight: normal
     }
-    .rts-pricing-area{
+
+    .rts-pricing-area {
         background-color: #215ba8;
     }
 
@@ -49,7 +50,9 @@
     }
 
     .form-card {
-        text-align: left
+        text-align: left;
+        background: #d3d3d336;
+        border-radius: 30px;
     }
 
     #msform fieldset:not(:first-of-type) {
@@ -794,7 +797,7 @@
 
                             <fieldset>
                                 <div class="card">
-                                    <div class="form-card p-2">
+                                    <div class="form-card p-5">
                                         <div class="row">
                                             <div class="col-7">
                                                 <h2 class="fs-title">Personal
@@ -957,26 +960,105 @@
                                         </div>
                                         <div class="row align-items-center">
                                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <label class="fieldlabels">Email</label> <input type="email" name="email"
-                                                    placeholder="Enter email" />
+                                                <label class="fieldlabels">Email</label> <input type="email"
+                                                    name="email" placeholder="Enter email" />
                                             </div>
                                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <label class="fieldlabels">Alternate Email</label> <input type="email" name="email"
-                                                    placeholder="Enter email" />
+                                                <label class="fieldlabels">Alternate Email</label> <input type="email"
+                                                    name="email" placeholder="Enter email" />
                                             </div>
                                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <label class="fieldlabels">Mobile</label> <input type="phone" name="phone"
-                                                    placeholder="Enter Mobile" />
+                                                <label class="fieldlabels">Mobile</label> <input type="phone"
+                                                    name="phone" placeholder="Enter Mobile" />
                                             </div>
                                             <div class="col-lg-3 col-md-6 col-sm-12">
-                                                <label class="fieldlabels">Alternate Mobile</label> <input type="phone" name="phone"
-                                                    placeholder="Enter Mobile" />
+                                                <label class="fieldlabels">Alternate Mobile</label> <input type="phone"
+                                                    name="phone" placeholder="Enter Mobile" />
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-card p-5 mt-5">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Other Details :</h2>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row align-items-center">
+
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Person With Disability applicable</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select</option>
+                                                    <option value="1">B2: No</option>
+                                                    <option value="2">A1: Yes</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Employement Status</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select</option>
+                                                    <option value="1">A1: Unemployed</option>
+                                                    <option value="2">B2: BAOU Regular Employee</option>
+                                                    <option value="3">C3: Employed</option>
+                                                    <option value="4">D4: KVS Employee</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="form-card p-5 mt-5">
+                                        <div class="row">
+                                            <div class="col-7">
+                                                <h2 class="fs-title">Scholarship Details :</h2>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Scholarship Amount</label>
+                                                <input type="number" name="Amount" placeholder="Ex. 1000" />
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Scholarship Department</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select</option>
+                                                    <option value="1">A1: Govt. Deptt.</option>
+                                                    <option value="2">B2: Other</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Family Income</label>
+                                                <input type="number" name="Amount" placeholder="Ex. 1000" />
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Below Poverty Line</label>
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Select</option>
+                                                    <option value="1">B2: No</option>
+                                                    <option value="2">A1: Yes</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="btn">
+                                            <input type="button" name="submit" class="next action-button" value="submit" />
+                                            
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <input type="button" name="next" class="next action-button" value="Next" /><input
-                                    type="button" name="edit" class="edit action-button" value="Edit" />
+                                <!-- <input type="button" name="next" class="next action-button" value="Next" /><input
+                                    type="button" name="edit" class="edit action-button" value="Edit" /> -->
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
