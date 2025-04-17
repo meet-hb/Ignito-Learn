@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/vendor/metismenu.css">
     <!-- custom style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/jquery-2.2.4.min.js" class="rel"> -->
 </head>
 <style>
     #heading {
@@ -263,6 +264,73 @@
     .fit-image {
         width: 100%;
         object-fit: cover
+    }
+
+    .card-header:first-child {
+        border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    }
+
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, .03);
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+
+    .table-bordered {
+        border: 1px solid #dee2e6;
+    }
+
+    .bg_baou_clr {
+        background: #00a3df !important;
+        color: #fff !important;
+    }
+
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid #dee2e6;
+    }
+
+    .table td,
+    .table th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .text-success {
+        color: #215ba8 !important;
+    }
+
+    .text-primary {
+        color: #7e7b9f !important;
+    }
+
+    .card-1 {
+
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+
+
     }
 </style>
 
@@ -1064,141 +1132,641 @@
                                     type="button" name="edit" class="edit action-button" value="Edit" />
                             </fieldset>
                             <fieldset>
-                                <div class="form-card">
+                                <div class="form-card p-5">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Personal
-                                                Information:</h2>
+                                            <h2 class="fs-title">Programme Details:</h2>
                                         </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 2 -
-                                                8</h2>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Programme Type</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option value="1">Graduate Programmes</option>
+                                                <option value="2">Post Graduate Programmes</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Mode Of Study</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Online</option>
+                                                <!-- <option value="1">Online</option> -->
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Select Programme For Enrollment</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option value="1">BA - ENG - Bachelor of Arts - English</option>
+                                                <option value="2">BCOM - Bachelor of Commerce</option>
+                                                <option value="3">BCA - Bachelor of Computer Applications</option>
+                                                <option value="4">BBA - Bachelor of Business Administration</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Medium</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Gujarati</option>
+                                                <!-- <option value="1">Online</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <div class="form-group-1">
+                                                <label for="parent-conditional-choice">Are you already student of BAOU
+                                                    for
+                                                    other programme?</label>
+                                                <select id="parent-conditional-choice"
+                                                    data-conditional-select-target-id="child-conditional-choice-1,child-conditional-choice-2"
+                                                    class="conditional-select form-select">
+                                                    <option selected disabled>Select</option>
+                                                    <option value="Yes, I do" data-conditional-value="true">Yes</option>
+                                                    <option value="No" data-conditional-value="false">No</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group-1">
+                                                <!-- <label for="child-conditional-choice-2">Child 2:</label> -->
+                                                <input type="text" id="child-conditional-choice-2"
+                                                    placeholder="Enter Enrolment Number" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 justify-content-center">
+                                            <div class="btn">
+                                                <input type="button" name="update" class="update action-button"
+                                                    value="update" />
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="edit" class="edit action-button" value="edit" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card p-5">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Qualification Details:</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Relevant Qualification</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option value="1">10+2 or equivalent</option>
+                                                <!-- <option value="2">Post Graduate Programmes</option> -->
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Year of Passing</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>2023</option>
+                                                <option value="1">2023</option>
+                                                <option value="2">2022</option>
+                                                <option value="3">2021</option>
+                                                <option value="4">2020</option>
+                                                <option value="5">2019</option>
+                                                <option value="6">2018</option>
+                                                <option value="7">2017</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">Division</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option value="1">First</option>
+                                                <option value="2">Second</option>
+                                                <option value="3">Third</option>
+                                                <option value="4">Pass</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12">
+                                            <label class="fieldlabels">% of Marks</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option value="1">61</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <div class="form-group-1">
+                                                <label class="fieldlabels">NAD user name (If applicable)</label>
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12">
+                                            <div class="form-group-1">
+                                                <label class="fieldlabels">NAD Certificate ID (If applicable)</label>
+                                                <input type="text" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 justify-content-center">
+                                            <div class="btn">
+                                                <input type="button" name="update" class="update action-button"
+                                                    value="update" />
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="edit" class="edit action-button" value="edit" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card p-5">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Course Selection for : Bachelor of Arts - English</h2>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="card p-5">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Option Type</th>
+                                                        <th scope="col">Course Code : Course name(Credit)</th>
+                                                        <!-- <th scope="col">Handle</th> -->
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>COMPULSORY</td>
+                                                        <td>ENGCOM-101 : English Compulsory (4)</td>
+                                                        <!-- <td>@mdo</td> -->
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>OPTIONAL</td>
+                                                        <td>GUJCOM-101 : Gujarati Compulsory(4)</td>
+                                                        <!-- <td>@fat</td> -->
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>OPTIONAL</td>
+                                                        <td>HNDCOM-101 : Hindi Compulsory(4)</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col-lg-12 ">
+                                                <div class="btn">
+                                                    <input type="button" name="submit" class="next action-button"
+                                                        value="submit" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
+                                <input type="button" name="edit" class="edit action-button" value="Edit" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card p-5">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Correspondence Details</h2>
+                                        </div>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Address</label>
+                                                <input type="text" name="text"></input>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                                <label class="fieldlabels">Pin Code</label>
+                                                <input type="number" name="number" placeholder="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 ">
+                                            <div class="btn">
+                                                <input type="button" name="submit" class="next action-button"
+                                                    value="submit" />
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="edit" class="edit action-button" value="Edit" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="Previous" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card p-5">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Document Details</h2>
+                                        </div>
+
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <label class="fieldlabels">10th Marksheet</label> <input type="file" name="pic"
+                                            accept="image/*">
+                                        <p>Min File Size: 10KB, Max File Size: 200KB,
+                                            Accepted Formates .jpg .jpeg .pdf</p>
+                                        <label class="fieldlabels">12th Marksheet</label>
+
+                                        <input type="file" name="pic" accept="image/*">
+                                        <p>Min File Size: 10KB, Max File Size: 200KB,
+                                            Accepted Formates .jpg .jpeg .pdf</p>
+
+                                        <div class="col-lg-12 ">
+                                            <div class="btn">
+                                                <input type="button" name="submit" class="next action-button"
+                                                    value="submit" />
+
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div> <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="edit" class="edit action-button" value="Edit" />
                                 <input type="button" name="previous" class="previous action-button-previous"
                                     value="Previous" />
                             </fieldset>
                             <fieldset>
-                                <div class="form-card">
+                                <div class="form-card p-5">
                                     <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Image
-                                                Upload:</h2>
+                                        <div class="col-md-12" bis_skin_checked="1">
+                                            <div class="card-1" bis_skin_checked="1">
+                                                <div class="card-header" bis_skin_checked="1">
+                                                    <h5 class="my-0 font-weight-normal text-success text-center">
+                                                        Personal Details</h5>
+                                                </div>
+                                                <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                    <div class="row " bis_skin_checked="1">
+                                                        <table class="table table-condensed table-bordered table-hover"
+                                                            id="adm-info-tbl">
+                                                            <tbody>
+                                                                <tr class="bg_baou_clr">
+                                                                    <td class="text-uppercase" colspan="8">Personal
+                                                                        Details</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="2"><b>Full Name of the Applicant (as
+                                                                            per Educational
+                                                                            Documents)</b>
+                                                                    </td>
+                                                                    <td colspan="2">Nayak Meetkumar</td>
+                                                                    <td><b>Mother Name</b></td>
+                                                                    <td>trtrr</td>
+                                                                    <td><b>Father </b></td>
+                                                                    <td>rtrtr</td>
+
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Date of Birth</b></td>
+                                                                    <td>01-04-2001</td>
+                                                                    <td><b>Category</b></td>
+                                                                    <td>OBC</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Gender</b></td>
+                                                                    <td>MALE</td>
+                                                                    <td><b>Nationality</b></td>
+                                                                    <td>INDIA</td>
+                                                                    <td><b>Area</b></td>
+                                                                    <td>Urban</td>
+                                                                    <td><b>Whether Minority</b></td>
+                                                                    <td>no</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Religion</b></td>
+                                                                    <td>Hindu</td>
+                                                                    <td><b>Marital Status</b></td>
+                                                                    <td>Single</td>
+                                                                    <td><b>Social Status</b></td>
+                                                                    <td>NA</td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Applicant's Email</b></td>
+                                                                    <td>meetnayak6419@gmail.com</td>
+                                                                    <td><b>Alternate Email</b></td>
+                                                                    <td></td>
+                                                                    <td><b>Mobile Number</b></td>
+                                                                    <td>7041867446</td>
+                                                                    <td><b>Alternate Mobile Number</b></td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr class="bg_baou_clr">
+                                                                    <td class="text-uppercase" colspan="8">Other Details
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Whether a Person with Disability</b></td>
+                                                                    <td>Yes</td>
+                                                                    <td colspan="3">
+
+                                                                        <b>Person With Disability applicable Category -
+                                                                        </b>
+                                                                    </td>
+                                                                    <td colspan="3">
+                                                                        <b>Person With Disability applicable Other -
+                                                                        </b>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Employment Status</b></td>
+                                                                    <td>EMPLOYED</td>
+                                                                    <td colspan="6"></td>
+                                                                </tr>
+                                                                <tr class="bg_baou_clr">
+                                                                    <td class="text-uppercase" colspan="8">Scholarship
+                                                                        Details</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><b>Scholarship Amount</b></td>
+                                                                    <td>10000₹</td>
+
+                                                                    <td><b>Scholarship Department</b></td>
+                                                                    <td>
+                                                                        A1: Govt. Deptt.
+                                                                    </td>
+
+                                                                    <td><b>Family Income</b></td>
+                                                                    <td>
+                                                                        100000000 </td>
+
+                                                                    <td><b>Below Poverty Line</b></td>
+                                                                    <td>
+
+                                                                        NO </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- STEP - 2 -->
+
+                                            <div class="card-1" bis_skin_checked="1">
+                                                <div class="card-header" bis_skin_checked="1">
+                                                    <h5 class="my-0 font-weight-normal text-success text-center">
+                                                        Programme Details</h5>
+                                                </div>
+                                                <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                    <div class="row " bis_skin_checked="1">
+                                                        <div class="table-responsive" bis_skin_checked="1">
+                                                            <table
+                                                                class="table table-condensed table-bordered table-hover"
+                                                                id="adm-info-tbl" cellspacing="0" cellpadding="0">
+                                                                <tbody>
+                                                                    <tr class="bg_baou_clr">
+                                                                        <td class=" text-uppercase" colspan="6">
+                                                                            Programme Details</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class=""><b>Programme Type</b></td>
+                                                                        <td class="">Graduate Programmes</td>
+                                                                        <td class=""><b>Programme</b></td>
+                                                                        <td class="">BA - ENG: Bachelor of Arts -
+                                                                            English</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class=""><b>Medium</b></td>
+                                                                        <td class="">
+                                                                            Gujarati </td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="" colspan="2"><b>Are you already
+                                                                                student of BAOU for other programme?</b>
+                                                                        </td>
+                                                                        <td class="" colspan="4">Yes</td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <!-- STEP - 3 -->
+
+                                            <div class="card-1" bis_skin_checked="1">
+                                                <div class="card-header" bis_skin_checked="1">
+                                                    <h5 class="my-0 font-weight-normal text-success text-center">
+                                                        Qualification Details</h5>
+                                                </div>
+                                                <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                    <div class="row " bis_skin_checked="1">
+                                                        <div class="table-responsive" bis_skin_checked="1">
+                                                            <table
+                                                                class="table table-condensed table-bordered table-hover"
+                                                                id="adm-info-tbl">
+                                                                <tbody>
+                                                                    <tr class="bg_baou_clr">
+                                                                        <td class=" text-uppercase" colspan="4">
+                                                                            <b>Qualification Details</b>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class=""><b>Qualification</b></td>
+                                                                        <td class="" colspan="3">
+                                                                            <p>10+2 or equivalent</p>
+                                                                        </td>
+                                                                        <!-- <td class=""><b>Main Subjects</b></td>
+                                                                        <td class="">
+                                                                            HINDI,
+                                                                            COMMERCE,
+                                                                        </td> -->
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class=""><b>Year of Passing</b></td>
+                                                                        <td class="">2023</td>
+                                                                        <td class=""><b>Division</b></td>
+                                                                        <td class="">01</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class=""><b>Percent of Marks (rounded
+                                                                                off)</b></td>
+                                                                        <td class="">61</td>
+                                                                        <td class=""><b>NAD Details</b></td>
+                                                                        <td class="">
+                                                                            User Name : <br>
+                                                                            ID : </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- STEP - 4 -->
+
+                                            <!-- STEP - 5 -->
+
+                                            <div class="card-1" bis_skin_checked="1">
+                                                <div class="card-header" bis_skin_checked="1">
+                                                    <h5 class="my-0 font-weight-normal text-success text-center">
+                                                        Correspondence Details</h5>
+                                                </div>
+                                                <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                    <div class="row " bis_skin_checked="1">
+                                                        <div class="table-responsive" id="adm-info-tbl"
+                                                            bis_skin_checked="1">
+                                                            <table
+                                                                class="table table-condensed table-bordered table-hover">
+                                                                <tbody>
+                                                                    <tr class="bg_baou_clr">
+                                                                        <td class="juipfname text-uppercase"
+                                                                            colspan="4">Correspondence Details</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Pin Code</th>
+                                                                        <th>Address</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="juipfname">382470</td>
+                                                                        <td class="juipfvalue">cxvbxcbn</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- STEP - 6 -->
+                                            <div class="card-1" bis_skin_checked="1">
+                                                <div class="card-header" bis_skin_checked="1">
+                                                    <h5 class="my-0 font-weight-normal text-success text-center">
+                                                        Document Details</h5>
+                                                </div>
+                                                <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                    <div class="row " bis_skin_checked="1">
+                                                        <div class="table-responsive" id="adm-info-tbl"
+                                                            bis_skin_checked="1">
+                                                            <table
+                                                                class="table table-condensed table-bordered table-hover">
+                                                                <tbody>
+                                                                    <tr class="bg_baou_clr">
+                                                                        <td class="juipfname text-uppercase"
+                                                                            colspan="4">Document Details</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th> Document Name </th>
+                                                                        <th> Uploaded File </th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="juipfname">10th Marksheet</td>
+                                                                        <td class="juipfname"><a
+                                                                                href="https://baouonline.edu.in/index.php/uploads/student_doc/7e2eb5667286f1786f70030aed8c9dc8.pdf"
+                                                                                class="text-primary"><i
+                                                                                    class="fa fa-file"></i> View</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="juipfname">12th Marksheet</td>
+                                                                        <td class="juipfname"><a
+                                                                                href="https://baouonline.edu.in/index.php/uploads/student_doc/d91a872dd2a4adafd6fd1d62b75a896b.pdf"
+                                                                                class="text-primary"><i
+                                                                                    class="fa fa-file"></i> View</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 3 -
-                                                8</h2>
-                                        </div>
-                                    </div> <label class="fieldlabels">Upload
-                                        Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label
-                                        class="fieldlabels">Upload Signature
-                                        Photo:</label> <input type="file" name="pic" accept="image/*">
-                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
+
+                                    </div>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="Submit" />
+                                <input type="button" name="edit" class="edit action-button" value="Edit" />
                                 <input type="button" name="previous" class="previous action-button-previous"
                                     value="Previous" />
+
                             </fieldset>
                             <fieldset>
-                                <div class="form-card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Image
-                                                Upload:</h2>
-                                        </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 4 -
-                                                8</h2>
-                                        </div>
-                                    </div> <label class="fieldlabels">Upload
-                                        Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label
-                                        class="fieldlabels">Upload Signature
-                                        Photo:</label> <input type="file" name="pic" accept="image/*">
-                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
-                                <input type="button" name="previous" class="previous action-button-previous"
-                                    value="Previous" />
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Image
-                                                Upload:</h2>
-                                        </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 5 -
-                                                8</h2>
-                                        </div>
-                                    </div> <label class="fieldlabels">Upload
-                                        Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label
-                                        class="fieldlabels">Upload Signature
-                                        Photo:</label> <input type="file" name="pic" accept="image/*">
-                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
-                                <input type="button" name="previous" class="previous action-button-previous"
-                                    value="Previous" />
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Image
-                                                Upload:</h2>
-                                        </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 6 -
-                                                8</h2>
-                                        </div>
-                                    </div> <label class="fieldlabels">Upload
-                                        Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label
-                                        class="fieldlabels">Upload Signature
-                                        Photo:</label> <input type="file" name="pic" accept="image/*">
-                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
-                                <input type="button" name="previous" class="previous action-button-previous"
-                                    value="Previous" />
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Image
-                                                Upload:</h2>
-                                        </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 7 -
-                                                8</h2>
-                                        </div>
-                                    </div> <label class="fieldlabels">Upload
-                                        Your Photo:</label> <input type="file" name="pic" accept="image/*"> <label
-                                        class="fieldlabels">Upload Signature
-                                        Photo:</label> <input type="file" name="pic" accept="image/*">
-                                </div> <input type="button" name="next" class="next action-button" value="Submit" />
-                                <input type="button" name="previous" class="previous action-button-previous"
-                                    value="Previous" />
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="fs-title">Finish:</h2>
-                                        </div>
-                                        <div class="col-5">
-                                            <h2 class="steps">Step 8 -
-                                                8</h2>
-                                        </div>
-                                    </div> <br><br>
-                                    <h2 class="purple-text text-center"><strong>SUCCESS
-                                            !</strong></h2> <br>
+                                <div class="form-card p-5">
                                     <div class="row justify-content-center">
-                                        <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png"
-                                                class="fit-image"> </div>
-                                    </div> <br><br>
-                                    <div class="row justify-content-center">
-                                        <div class="col-7 text-center">
-                                            <h5 class="purple-text text-center">You
-                                                Have Successfully Signed
-                                                Up</h5>
+                                        <div class="col-md-12" bis_skin_checked="1">
+                                            <form class="admission-form has-validation-callback"
+                                                action="" method="post"
+                                                enctype="multipart/form-data">
+                                                <div class="card-1" bis_skin_checked="1">
+                                                    <div class="card-header" bis_skin_checked="1">
+                                                        <h5 class="my-0 font-weight-normal">Fess Details for <b
+                                                                class="text-primary text-center"> Bachelor of Arts -
+                                                                English (BA - ENG) </b></h5>
+                                                    </div>
+                                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                                        <div class="row form-group" bis_skin_checked="1">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Description</th>
+                                                                        <th style="text-align: right;">Amount(<b>₹</b>)
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td><b>Programme fee</b></td>
+                                                                        <td style="text-align: right;">5500</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td><b>Registration fee (One time application
+                                                                                processing fees)</b></td>
+                                                                        <td style="text-align: right;">1000</td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>&nbsp;</td>
+                                                                        <td><b>Total</b></td>
+                                                                        <td style="text-align: right;"><b>6500</b></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div class="col-md-12" bis_skin_checked="1">
+
+                                                                <!-- <h3 class="text-primary text-center">Pay Fees: <span class="text-danger">6500Rs/-</span></h3> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form-group" bis_skin_checked="1">
+                                                            <div class="col-md-12" bis_skin_checked="1">
+                                                                <button type="submit"
+                                                                    class="btn btn-success btn-block">Pay fess <b
+                                                                        style="font-size: 16px">6500₹</b></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
+
                                 </div>
                             </fieldset>
                         </form>
@@ -1840,6 +2408,7 @@
     <script src="assets/js/plugins/calender.js"></script>
     <!-- main Js -->
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -1918,6 +2487,35 @@
             })
 
         });
+
+        var conditionalSelect = function () {
+            var $conditionalSelectTargetId = $(".conditional-select").data("conditionalSelectTargetId");
+            if ($conditionalSelectTargetId.indexOf(",") > 0) {
+                // Hide More than One Input elements
+                $conditionalSelectTargetId.split(",").forEach(function (item) {
+                    $("#" + item).closest(".form-group-1").hide();
+                });
+            } else {
+                // Hide One Input element
+                $("#" + $conditionalSelectTargetId).closest(".form-group-1").hide();
+            }
+
+            $(".conditional-select").on("change", function () {
+                var $self = $(this);
+                var $targetId = $self.data("conditionalSelectTargetId");
+                var $selectedValue = $self.find("option:selected").data("conditionalValue");
+
+                if ($targetId.indexOf(",") > 0) {
+                    $targetId.split(",").forEach(function (item) {
+                        $selectedValue === true ? $("#" + item).closest(".form-group-1").show() : $("#" + item).closest(".form-group-1").hide();
+                    });
+                } else {
+                    $selectedValue === true ? $("#" + $targetId).closest(".form-group-1").show() : $("#" + $targetId).closest(".form-group-1").hide();
+                }
+            });
+        };
+
+        conditionalSelect();
     </script>
 
 </body>
