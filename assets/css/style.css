@@ -630,6 +630,7 @@ ol ul {
     font-size: 33px !important;
     line-height: 44px !important;
   }
+
   .single--pricing-area .access-area .single-access {
     gap: 4px !important;
   }
@@ -20544,9 +20545,9 @@ nav ul li a {
 .rts-single-course .tags-area-wrapper .single-tag span {
   display: block;
   padding: 3px 8px;
-  background: #EEEBFF;
+  background: #c6d5e8;
   border-radius: 2px;
-  color: #553CDF;
+  color: #215ba8;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -21601,9 +21602,9 @@ nav ul li a {
 
 .filters-button-group button {
   padding: 3px 10px;
-  background: #EEEBFF;
+  background: #215ba842;
   min-width: max-content;
-  color: #553CDF;
+  color: #215ba8;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
