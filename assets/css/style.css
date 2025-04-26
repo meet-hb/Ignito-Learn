@@ -19350,7 +19350,7 @@ nav ul li a {
 }
 
 .about-inner-right-two .what-you-get .single-facilityes {
-  display: flex;
+  /* display: flex; */
   align-items: flex-start;
   gap: 15px;
   padding: 25px 17px 25px 25px;
