@@ -1260,9 +1260,9 @@ ol ul {
   padding-bottom: 60px !important;
 }
 
-.pl--60 {
+/* .pl--60 {
   padding-left: 60px !important;
-}
+} */
 
 .pr--60 {
   padding-right: 60px !important;
@@ -19341,7 +19341,7 @@ nav ul li a {
 
 .about-inner-right-two .what-you-get {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 30px;
   margin-top: 20px;
   padding-bottom: 40px;
