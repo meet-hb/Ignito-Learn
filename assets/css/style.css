@@ -16121,7 +16121,7 @@ nav ul li a {
 .main-nav-one ul li.has-dropdown .megamenu-hub.min-mega {
   max-width: 80% !important;
   margin: auto;
-  min-width: 70%;
+  min-width: 80%;
   left: 19%;
   padding: 30px;
 }
