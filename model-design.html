@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<style>
+    #heading {
+        text-transform: uppercase;
+        color: #673AB7;
+        font-weight: normal
+    }
+
+    /* 
+    .rts-pricing-area {
+        background: linear-gradient(359deg, rgba(190, 33, 38, 1) 37%, rgba(64, 64, 65, 1) 100%);
+    } */
+
+    #msform {
+        text-align: center;
+        position: relative;
+        margin-top: 20px
+    }
+
+    #msform fieldset {
+        /* background: white; */
+        border: 0 none;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding-bottom: 20px;
+        position: relative
+    }
+
+    .form-card {
+        text-align: left;
+        background: #be21260d;
+        /* border-radius: 30px; */
+    }
+
+    #msform fieldset:not(:first-of-type) {
+        display: none
+    }
+
+    #msform input,
+    .form-select,
+    #msform textarea {
+        padding: 8px 15px 8px 15px;
+        border: 1px solid #ced4da;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        margin-top: 2px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: gray;
+        background-color: #fff;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    #msform input:focus,
+    #msform textarea:focus #msform .form-select:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #215ba8;
+        outline-width: 0
+    }
+
+    #msform .action-button {
+        width: 100px;
+        background: linear-gradient(181deg, rgba(190, 33, 38, 1) 37%, rgba(64, 64, 65, 1) 100%);
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 0px 10px 5px;
+        float: right
+    }
+
+    #msform .action-button:hover,
+    #msform .action-button:focus {
+        background-color: #215ba8
+    }
+
+    #msform .action-button-previous {
+        width: 100px;
+        background: #616161;
+        font-weight: bold;
+        color: white;
+        border: 0 none;
+        border-radius: 0px;
+        cursor: pointer;
+        padding: 10px 5px;
+        margin: 10px 5px 10px 0px;
+        float: right
+    }
+
+    .form-select {
+        line-height: 28px;
+    }
+
+    #msform .action-button-previous:hover,
+    #msform .action-button-previous:focus {
+        background-color: #000000
+    }
+
+    .card {
+        z-index: 0;
+        border: none;
+        position: relative;
+        border-radius: 30px;
+    }
+
+    .fs-title {
+        font-size: 25px;
+        color: #be2126;
+        margin-bottom: 15px;
+        font-weight: normal;
+        text-align: left
+    }
+
+    .purple-text {
+        color: #215ba8;
+        font-weight: normal
+    }
+
+    .steps {
+        font-size: 25px;
+        color: gray;
+        margin-bottom: 10px;
+        font-weight: normal;
+        text-align: right
+    }
+
+    .fieldlabels {
+        color: #000;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        color: lightgrey
+    }
+
+    #progressbar .active {
+        color: #be2126;
+    }
+
+    #progressbar li {
+        list-style-type: none;
+        font-size: 15px;
+        width: 12%;
+        float: left;
+        position: relative;
+        font-weight: 400
+    }
+
+    #progressbar #account:before {
+        font-family: FontAwesome;
+        content: "\f13e"
+    }
+
+    #progressbar #personal:before {
+        font-family: FontAwesome;
+        content: "\f19d"
+    }
+
+    #progressbar #payment:before {
+        font-family: FontAwesome;
+        content: "\f164"
+    }
+
+    #progressbar #Course:before {
+        font-family: FontAwesome;
+        content: "\f02d"
+    }
+
+    #progressbar #details:before {
+        font-family: FontAwesome;
+        content: "\f05a"
+    }
+
+    #progressbar #confirm:before {
+        font-family: FontAwesome;
+        content: "\f00c"
+    }
+
+    #progressbar #Document:before {
+        font-family: FontAwesome;
+        content: "\f0ea"
+    }
+
+    #progressbar #Fees:before {
+        font-family: FontAwesome;
+        content: "\f53a"
+    }
+
+    #progressbar #Preview:before {
+        font-family: FontAwesome;
+        content: "\f06e"
+    }
+
+    #progressbar li:before {
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        display: block;
+        font-size: 20px;
+        color: #ffffff;
+        background: lightgray;
+        border-radius: 50%;
+        margin: 0 auto 10px auto;
+        padding: 2px
+    }
+
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: lightgray;
+        position: absolute;
+        left: 0;
+        top: 25px;
+        z-index: -1
+    }
+
+    #progressbar li.active:before,
+    #progressbar li.active:after {
+        background: #be2126;
+    }
+
+    .progress {
+        height: 20px
+    }
+
+    .progress-bar {
+        background-color: #215ba8;
+    }
+
+    .fit-image {
+        width: 100%;
+        object-fit: cover
+    }
+
+    .card-header:first-child {
+        border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    }
+
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, .03);
+        border-bottom: 1px solid rgba(0, 0, 0, .125);
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+
+    .table-bordered {
+        border: 1px solid #dee2e6;
+    }
+
+    .bg_baou_clr {
+        background: #00a3df !important;
+        color: #fff !important;
+    }
+
+    .table-bordered td,
+    .table-bordered th {
+        border: 1px solid #dee2e6;
+    }
+
+    .table td,
+    .table th {
+        padding: .75rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .text-uppercase {
+        text-transform: uppercase !important;
+    }
+
+    .text-success {
+        color: #215ba8 !important;
+    }
+
+    .text-primary {
+        color: #7e7b9f !important;
+    }
+
+    .card-1 {
+
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+
+
+    }
+</style>
+
+<body>
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Student Admission Details</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-card p-3">
+                        <div class="row" style="height: 800px; overflow-y: scroll;">
+                            <div class="col-md-12" bis_skin_checked="1">
+                                <div class="card-1" bis_skin_checked="1">
+                                    <div class="card-header" bis_skin_checked="1">
+                                        <h5 class="my-0 font-weight-normal text-success text-center">
+                                            Personal Details</h5>
+                                    </div>
+                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                        <div class="row " bis_skin_checked="1">
+                                            <table class="table table-condensed table-bordered table-hover"
+                                                id="adm-info-tbl">
+                                                <tbody>
+                                                    <!-- <tr class="bg_baou_clr">
+                                                        <td class="text-uppercase" colspan="8">Personal
+                                                            Details</td>
+                                                    </tr> -->
+                                                    <tr>
+                                                        <td colspan="1"><b>Full Name </b>
+                                                        </td>
+                                                        <td colspan="1">Nayak Meetkumar</td>
+                                                        <td><b>Mother Name</b></td>
+                                                        <td>trtrr</td>
+                                                        <td><b>Father </b></td>
+                                                        <td>rtrtr</td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Date of Birth</b></td>
+                                                        <td>01-04-2001</td>
+                                                        <td><b>Category</b></td>
+                                                        <td>OBC</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Gender</b></td>
+                                                        <td>MALE</td>
+                                                        <td><b>Nationality</b></td>
+                                                        <td>INDIA</td>
+                                                        <td><b>Area</b></td>
+                                                        <td>Urban</td>
+                                                        <td><b>Whether Minority</b></td>
+                                                        <td>no</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Religion</b></td>
+                                                        <td>Hindu</td>
+                                                        <td><b>Marital Status</b></td>
+                                                        <td>Single</td>
+                                                        <td><b>Social Status</b></td>
+                                                        <td>NA</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Applicant's Email</b></td>
+                                                        <td>meetnayak6419@gmail.com</td>
+                                                        <td><b>Alternate Email</b></td>
+                                                        <td></td>
+                                                        <td><b>Mobile Number</b></td>
+                                                        <td>7041867446</td>
+                                                        <td><b>Alternate Mobile Number</b></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr class="bg_baou_clr">
+                                                        <td class="text-uppercase" colspan="8">Other Details
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Whether a Person with Disability</b></td>
+                                                        <td>Yes</td>
+                                                        <td colspan="3">
+
+                                                            <b>Person With Disability applicable Category -
+                                                            </b>
+                                                        </td>
+                                                        <td colspan="3">
+                                                            <b>Person With Disability applicable Other -
+                                                            </b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>Employment Status</b></td>
+                                                        <td>EMPLOYED</td>
+                                                        <td colspan="6"></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- STEP - 2 -->
+
+                                <div class="card-1" bis_skin_checked="1">
+                                    <div class="card-header" bis_skin_checked="1">
+                                        <h5 class="my-0 font-weight-normal text-success text-center">
+                                            Programme Details</h5>
+                                    </div>
+                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                        <div class="row " bis_skin_checked="1">
+                                            <div class="table-responsive" bis_skin_checked="1">
+                                                <table class="table table-condensed table-bordered table-hover"
+                                                    id="adm-info-tbl" cellspacing="0" cellpadding="0">
+                                                    <tbody>
+                                                        <!-- <tr class="bg_baou_clr">
+                                                            <td class=" text-uppercase" colspan="6">
+                                                                Programme Details</td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <td class=""><b>Programme Type</b></td>
+                                                            <td class="">Graduate Programmes</td>
+                                                            <td class=""><b>Programme</b></td>
+                                                            <td class="">BA - ENG: Bachelor of Arts -
+                                                                English</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=""><b>Medium</b></td>
+                                                            <td class="">
+                                                                Gujarati </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="" colspan="2"><b>Are you already
+                                                                    student of BAOU for other programme?</b>
+                                                            </td>
+                                                            <td class="" colspan="4">Yes</td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <!-- STEP - 3 -->
+
+                                <div class="card-1" bis_skin_checked="1">
+                                    <div class="card-header" bis_skin_checked="1">
+                                        <h5 class="my-0 font-weight-normal text-success text-center">
+                                            Qualification Details</h5>
+                                    </div>
+                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                        <div class="row " bis_skin_checked="1">
+                                            <div class="table-responsive" bis_skin_checked="1">
+                                                <table class="table table-condensed table-bordered table-hover"
+                                                    id="adm-info-tbl">
+                                                    <tbody>
+                                                        <!-- <tr class="bg_baou_clr">
+                                                            <td class=" text-uppercase" colspan="4">
+                                                                <b>Qualification Details</b>
+                                                            </td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <td class=""><b>Qualification</b></td>
+                                                            <td class="" colspan="3">
+                                                                <p>10+2 or equivalent</p>
+                                                            </td>
+                                                            <!-- <td class=""><b>Main Subjects</b></td>
+                                                            <td class="">
+                                                                HINDI,
+                                                                COMMERCE,
+                                                            </td> -->
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=""><b>Year of Passing</b></td>
+                                                            <td class="">2023</td>
+                                                            <td class=""><b>Division</b></td>
+                                                            <td class="">01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class=""><b>Percent of Marks (rounded
+                                                                    off)</b></td>
+                                                            <td class="">61</td>
+                                                            <td class=""><b>NAD Details</b></td>
+                                                            <td class="">
+                                                                User Name : <br>
+                                                                ID : </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP - 4 -->
+
+                                <!-- STEP - 5 -->
+
+                                <div class="card-1" bis_skin_checked="1">
+                                    <div class="card-header" bis_skin_checked="1">
+                                        <h5 class="my-0 font-weight-normal text-success text-center">
+                                            Correspondence Details</h5>
+                                    </div>
+                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                        <div class="row " bis_skin_checked="1">
+                                            <div class="table-responsive" id="adm-info-tbl" bis_skin_checked="1">
+                                                <table class="table table-condensed table-bordered table-hover">
+                                                    <tbody>
+                                                        <!-- <tr class="bg_baou_clr">
+                                                            <td class="juipfname text-uppercase" colspan="4">
+                                                                Correspondence Details</td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <th>Pin Code</th>
+                                                            <th>Address</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="juipfname">382470</td>
+                                                            <td class="juipfvalue">cxvbxcbn</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- STEP - 6 -->
+                                <div class="card-1" bis_skin_checked="1">
+                                    <div class="card-header" bis_skin_checked="1">
+                                        <h5 class="my-0 font-weight-normal text-success text-center">
+                                            Document Details</h5>
+                                    </div>
+                                    <div class="card-body jui-form-fieldset" bis_skin_checked="1">
+                                        <div class="row " bis_skin_checked="1">
+                                            <div class="table-responsive" id="adm-info-tbl" bis_skin_checked="1">
+                                                <table class="table table-condensed table-bordered table-hover">
+                                                    <tbody>
+                                                        <!-- <tr class="bg_baou_clr">
+                                                            <td class="juipfname text-uppercase" colspan="4">Document
+                                                                Details</td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <th> Document Name </th>
+                                                            <th> Uploaded File </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="juipfname">10th Marksheet</td>
+                                                            <td class="juipfname"><a
+                                                                    href="https://baouonline.edu.in/index.php/uploads/student_doc/7e2eb5667286f1786f70030aed8c9dc8.pdf"
+                                                                    class="text-primary"><i class="fa fa-file"></i>
+                                                                    View</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="juipfname">12th Marksheet</td>
+                                                            <td class="juipfname"><a
+                                                                    href="https://baouonline.edu.in/index.php/uploads/student_doc/d91a872dd2a4adafd6fd1d62b75a896b.pdf"
+                                                                    class="text-primary"><i class="fa fa-file"></i>
+                                                                    View</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open
+                        second modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Open first
+        modal</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
