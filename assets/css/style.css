@@ -21289,7 +21289,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #E1DDFA;
+  border-top: 1px solid #be212633;
   flex-wrap: wrap;
 }
 
@@ -29309,7 +29309,7 @@ edit .quantity-edit button {
 
 .left-sindebar-dashboard {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be212633;
   background: #FFF;
   padding: 40px !important;
 }
@@ -29339,7 +29339,7 @@ edit .quantity-edit button {
   display: flex;
   align-items: start;
   gap: 15px;
-  border-bottom: 1px solid #DDD8F9;
+  border-bottom: 1px solid #be212633;
 }
 
 .left-sindebar-dashboard .dashboard-left-single-wrapper .single-item:first-child {
@@ -29384,7 +29384,7 @@ edit .quantity-edit button {
 
 .right-sidebar-dashboard {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #f2d3d4;
   padding: 30px;
 }
 
@@ -29397,7 +29397,7 @@ edit .quantity-edit button {
 
 .single-dashboard-card {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be2126;
   background: #FFF;
   text-align: center;
   padding: 47px;
@@ -29410,7 +29410,7 @@ edit .quantity-edit button {
 }
 
 .single-dashboard-card .icon {
-  background: #F9F8FF;
+  background: #f2272d1c;
   height: 80px;
   width: 80px;
   border-radius: 50%;
@@ -29420,7 +29420,7 @@ edit .quantity-edit button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be212678;
 }
 
 .single-dashboard-card .icon i {
@@ -29429,7 +29429,7 @@ edit .quantity-edit button {
 }
 
 .single-dashboard-card .title {
-  color: #553CDF;
+  color: #be2126;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -29612,7 +29612,7 @@ edit .quantity-edit button {
 
 .right-sidebar-my-profile-dash {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #f2d3d4;
   padding: 30px;
 }
 
@@ -29653,7 +29653,7 @@ edit .quantity-edit button {
 
 .exrolled-course-wrapper-dashed {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be212633;
   padding: 30px;
 }
 
@@ -29666,7 +29666,7 @@ edit .quantity-edit button {
 
 .exrolled-course-wrapper-dashed .nav-tabs {
   margin-bottom: 0;
-  border-bottom: 1px solid #DDD8F9;
+  border-bottom: 1px solid #be2126;
 }
 
 .exrolled-course-wrapper-dashed .nav-tabs li {
@@ -29691,12 +29691,12 @@ edit .quantity-edit button {
 }
 
 .exrolled-course-wrapper-dashed .nav-tabs li button.active {
-  border-bottom: 3px solid #553CDF;
-  color: #553CDF;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
+  border-bottom: 3px solid #e62e2f;
+    color: #e42f2e;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
 }
 
 .single-course-style-three .progress-wrapper-lesson-compleate {
@@ -29782,23 +29782,23 @@ edit .quantity-edit button {
 
 .rts-reviewd-area-dashed {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #f2d3d4;
   padding: 30px;
 }
 
 .rts-reviewd-area-dashed .table-reviews {
   width: 100%;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be2126;
   border-radius: 6px !important;
 }
 
 .rts-reviewd-area-dashed .table-reviews thead tr th {
   padding: 12px 20px;
-  background: #F9F8FF;
+  background: #fffafa;
 }
 
 .rts-reviewd-area-dashed .table-reviews tbody tr {
-  border-top: 1px solid #DDD8F9;
+  border-top: 1px solid #be2126;
 }
 
 .rts-reviewd-area-dashed .table-reviews tbody tr td {
@@ -29846,7 +29846,7 @@ edit .quantity-edit button {
 
 .rts-reviewd-area-dashed .table-reviews.quiz thead tr th {
   text-transform: capitalize !important;
-  color: #110C2D;
+  color:#404041;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -30062,10 +30062,10 @@ edit .quantity-edit button {
 
 .calender-and-tab-btn-between .nav-tabs li button {
   border-radius: 4px;
-  border: 1px solid #553CDF;
+  border: 1px solid #ed2b30;
   padding: 7px 15px;
   border-radius: 6px;
-  color: #553CDF;
+  color: #be2126;
 }
 
 .calender-and-tab-btn-between .nav-tabs li button[aria-selected=true] {
@@ -30105,7 +30105,7 @@ edit .quantity-edit button {
 
 .calender-and-tab-btn-between .date-picker-area input {
   border-radius: 4px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be2126;
   height: 42px;
 }
 
@@ -30166,7 +30166,7 @@ tbody.questions-answer tr td .status-btn-wrapper .button-area i {
 
 .short-by--category-sash .nice-select-wrap {
   border-radius: 6px;
-  border: 1px solid #DDD8F9;
+  border: 1px solid #be2126;
   max-width: 320px;
 }
 
