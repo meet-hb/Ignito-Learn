@@ -18797,6 +18797,8 @@ nav ul li a {
 
 .rts-bread-crumbarea-1 {
   background-image: url(../images/breadcrumb/Img.png);
+  background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .breadcrumb-main-wrapper .title {
