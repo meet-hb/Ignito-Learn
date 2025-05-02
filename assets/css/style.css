@@ -672,7 +672,8 @@ ol ul {
 .rts-section-gap {
   padding: 30px 0;
 }
-.rts-section-gap1{
+
+.rts-section-gap1 {
   padding: 50px 0;
 }
 
@@ -18798,7 +18799,7 @@ nav ul li a {
 .rts-bread-crumbarea-1 {
   background-image: url(../images/breadcrumb/Img.png);
   background-repeat: no-repeat;
-    background-size: cover;
+  background-size: cover;
 }
 
 .breadcrumb-main-wrapper .title {
@@ -22978,9 +22979,9 @@ nav ul li a {
 
 .fun-facts-main-wrapper-1.style-two {
   border: 1px solid #be2126;
-    padding: 32px 120px;
-    box-shadow: 0px 4px 30px 0px rgb(190 33 38 / 29%);
-    background: #fffafa;
+  padding: 32px 120px;
+  box-shadow: 0px 4px 30px 0px rgb(190 33 38 / 29%);
+  background: #fffafa;
 }
 
 @media only screen and (max-width: 767px) {
@@ -23445,7 +23446,7 @@ nav ul li a {
 }
 
 .single-instructor .thumbnail-img .social-img-instructor ul li a i {
-  color:#404041;
+  color: #404041;
 }
 
 .single-instructor .thumbnail-img .social-img-instructor ul li.bottom {
@@ -24346,7 +24347,7 @@ nav ul li a {
 .single-students-feedback-5 {
   padding: 40px;
   border: 1px solid #be212617;
-  background:#be212617;
+  background: #be212617;
   position: relative;
 }
 
@@ -24371,7 +24372,7 @@ nav ul li a {
 }
 
 .single-students-feedback-5 .stars i {
-  color:#ba2025;
+  color: #ba2025;
   font-size: 16px;
 }
 
@@ -26822,7 +26823,7 @@ input[type=radio]:checked~label::after {
 }
 
 .filter-small-top-full .left-filter .nice-select-wrap .drop {
-  color:#be2126;
+  color: #be2126;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -26880,7 +26881,7 @@ input[type=radio]:checked~label::after {
 }
 
 .filter-small-top-full .right-filter .nav-tabs li button.active {
-  background:#be2126;
+  background: #be2126;
   color: #fff;
 }
 
@@ -27616,7 +27617,7 @@ edit .quantity-edit button {
   z-index: 3;
   width: 0;
   height: 0;
-  border-left:15px solid #be2126;
+  border-left: 15px solid #be2126;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
   top: 50%;
@@ -27742,7 +27743,7 @@ edit .quantity-edit button {
 }
 
 .bg-light-1 {
-  background:#40404217;
+  background: #40404217;
 }
 
 .section-title-w-style-center {
@@ -27751,7 +27752,7 @@ edit .quantity-edit button {
 
 .section-title-w-style-center .title {
   margin-bottom: 5px;
-  color:#404041;
+  color: #404041;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -27776,7 +27777,7 @@ edit .quantity-edit button {
 }
 
 .kitchen-home {
-  background:#404041;
+  background: #404041;
 }
 
 .success {
@@ -28246,12 +28247,12 @@ edit .quantity-edit button {
   border: none;
   border-radius: 4px;
   border: 1px solid #be2126;
-    color: #be2126;
+  color: #be2126;
   font-size: 16px;
 }
 
 .course-details-btn-wrapper ul li button.nav-link.active {
-  background:#404041;
+  background: #404041;
   color: #fff;
 }
 
@@ -28376,7 +28377,7 @@ edit .quantity-edit button {
 }
 
 .course-content-wrapper-main .accordion .accordion-item .accordion-body .play-vedio-wrapper .left span {
-  color:#be2126;
+  color: #be2126;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -29694,11 +29695,11 @@ edit .quantity-edit button {
 
 .exrolled-course-wrapper-dashed .nav-tabs li button.active {
   border-bottom: 3px solid #e62e2f;
-    color: #e42f2e;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
+  color: #e42f2e;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
 }
 
 .single-course-style-three .progress-wrapper-lesson-compleate {
@@ -29848,7 +29849,7 @@ edit .quantity-edit button {
 
 .rts-reviewd-area-dashed .table-reviews.quiz thead tr th {
   text-transform: capitalize !important;
-  color:#404041;
+  color: #404041;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -32672,7 +32673,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
   height: 115%;
   content: "";
   z-index: -1;
-  background:#be2126;
+  background: #be2126;
 }
 
 @media screen and (max-width: 1200px) {
@@ -34787,7 +34788,7 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
 }
 
 .rts-elevate-pagination ul li button.active {
-  background:#be2126;
+  background: #be2126;
   color: #fff;
 }
 
